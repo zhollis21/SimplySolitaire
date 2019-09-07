@@ -10,10 +10,16 @@ public class Card : MonoBehaviour
     public Suit CardSuit;
     public Value CardValue;
 
+    public Sprite ClubsSprite;
+    public Sprite DiamondsSprite;
+    public Sprite HeartsSprite;
+    public Sprite SpadesSprite;
+    public Sprite BackSprite;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
