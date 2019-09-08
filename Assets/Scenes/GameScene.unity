@@ -149,28 +149,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb61e7af30f7994596a6e0838576a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TwoCard: {fileID: 5006658940425809970, guid: 4937646ed9db8a2479e5873595c6f569, type: 3}
-  ThreeCard: {fileID: 6636188581082821985, guid: 7acbec1a10a3bd9488a73635cd5b84c7,
+  Card2Prefab: {fileID: 5006658940425809970, guid: 4937646ed9db8a2479e5873595c6f569,
     type: 3}
-  FourCard: {fileID: 7451921209664825349, guid: 4c01dda2b39149b4eb6cb866866d7a05,
+  Card3Prefab: {fileID: 6636188581082821985, guid: 7acbec1a10a3bd9488a73635cd5b84c7,
     type: 3}
-  FiveCard: {fileID: 5735054358065580535, guid: 5d6a5e63eabf2484c979f7b8ebb81839,
+  Card4Prefab: {fileID: 7451921209664825349, guid: 4c01dda2b39149b4eb6cb866866d7a05,
     type: 3}
-  SixCard: {fileID: 2385806480224100857, guid: 77fd3eabc9e28fe4f8c00bbf45eff95e, type: 3}
-  SevenCard: {fileID: 1051418616365555053, guid: 3e0fefd85a94d2a49969af337c2fe6a4,
+  Card5Prefab: {fileID: 5735054358065580535, guid: 5d6a5e63eabf2484c979f7b8ebb81839,
     type: 3}
-  EightCard: {fileID: 3330238742212857279, guid: 98b5b75b4143ada4a8e4f5cac7a16dea,
+  Card6Prefab: {fileID: 2385806480224100857, guid: 77fd3eabc9e28fe4f8c00bbf45eff95e,
     type: 3}
-  NineCard: {fileID: 6826984969651844216, guid: 53b778087c9853847a47f837ba9bf41f,
+  Card7Prefab: {fileID: 1051418616365555053, guid: 3e0fefd85a94d2a49969af337c2fe6a4,
     type: 3}
-  TenCard: {fileID: 2657622617851970307, guid: 341364b2cc9d5844889682f717a66934, type: 3}
-  JackCard: {fileID: 2589308818407898547, guid: b9e1a2f04a23a494dbc4d5d4cc8c6348,
+  Card8Prefab: {fileID: 3330238742212857279, guid: 98b5b75b4143ada4a8e4f5cac7a16dea,
     type: 3}
-  QueenCard: {fileID: 2757182088041731903, guid: f2aafa0424bc6dd4fb38a9ea477f8d52,
+  Card9Prefab: {fileID: 6826984969651844216, guid: 53b778087c9853847a47f837ba9bf41f,
     type: 3}
-  KingCard: {fileID: 4389133573263607048, guid: 91099a87d54dfd545acf5563f0fed15e,
+  Card10Prefab: {fileID: 2657622617851970307, guid: 341364b2cc9d5844889682f717a66934,
     type: 3}
-  AceCard: {fileID: 4464156123442096685, guid: dcfb49b5dc1ccc64c8f28d4d93ca0d3a, type: 3}
+  CardJPrefab: {fileID: 2589308818407898547, guid: b9e1a2f04a23a494dbc4d5d4cc8c6348,
+    type: 3}
+  CardQPrefab: {fileID: 2757182088041731903, guid: f2aafa0424bc6dd4fb38a9ea477f8d52,
+    type: 3}
+  CardKPrefab: {fileID: 4389133573263607048, guid: 91099a87d54dfd545acf5563f0fed15e,
+    type: 3}
+  CardAPrefab: {fileID: 4464156123442096685, guid: dcfb49b5dc1ccc64c8f28d4d93ca0d3a,
+    type: 3}
 --- !u!4 &290451420
 Transform:
   m_ObjectHideFlags: 0
