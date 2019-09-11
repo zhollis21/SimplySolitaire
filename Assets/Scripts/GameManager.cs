@@ -64,14 +64,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Shuffle()
+    public void Shuffle(int timesToShuffle, List<Card> cardsToShuffle)
     {
-        // ToDo
+        int numCards = cardsToShuffle.Count;
+
+        for(int i = 0; i < timesToShuffle; i++)
+        {
+            int firstIndex = Random.Range(0, numCards);
+            int secondIndex = Random.Range(0, numCards);
+
+            Swap(cardsToShuffle[firstIndex], cardsToShuffle[secondIndex]);
+        }
+    }
+
+    public void Swap(Card firstCard, Card secondCard)
+    {
+        Card tempCard = new Card();
+
+        tempCard = firstCard;
+        firstCard = secondCard;
+        secondCard = tempCard;
     }
 
     public void Deal()
     {
-        Shuffle();
+        Shuffle(cards.Count, cards);
 
         // ToDo
     }
