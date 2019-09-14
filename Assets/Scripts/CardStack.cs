@@ -8,19 +8,29 @@ namespace Assets.Scripts
 {
     public class CardStack
     {
-        public List<Card> Cards = new List<Card>();
+        protected List<Card> cards = new List<Card>();
 
         public void Push(Card newCard)
         {
-            Cards.Add(newCard);
+            cards.Add(newCard);
+        }
+
+        public void PushRange(List<Card> newCards)
+        {
+            cards.AddRange(newCards);
         }
 
         public Card Pop()
         {
-            Card lastCard = Cards.Last();
-            Cards.Remove(lastCard);
+            Card lastCard = cards.Last();
+            cards.Remove(lastCard);
 
             return lastCard;
+        }
+
+        public void ClearStack()
+        {
+            cards.Clear();
         }
     }
 }
