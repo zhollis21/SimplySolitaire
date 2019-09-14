@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject CardQPrefab;
     public GameObject CardKPrefab;
     public GameObject CardAPrefab;
+    public Deck CardDeck;
 
     private List<Card> cards = new List<Card>();
 
@@ -90,6 +91,6 @@ public class GameManager : MonoBehaviour
     {
         Shuffle(cards.Count, cards);
 
-        // ToDo
+        CardDeck.InitializeDeck(cards);
     }
 }

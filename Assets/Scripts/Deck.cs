@@ -26,11 +26,13 @@ public class Deck : MonoBehaviour
         
     }
 
-    public void OnDeckClick()
+    public void OnMouseDown()
     {
         Card clickedCard = undealtCards.Pop();
 
         dealtCards.Push(clickedCard);
+
+        Debug.Log("Click");
     }
 
     public void InitializeDeck(List<Card> cards)
