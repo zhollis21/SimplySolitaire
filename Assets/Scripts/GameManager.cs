@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void Swap(Card firstCard, Card secondCard)
     {
-        Card tempCard = new Card();
+        Card tempCard;
 
         tempCard = firstCard;
         firstCard = secondCard;
