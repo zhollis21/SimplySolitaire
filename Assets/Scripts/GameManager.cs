@@ -65,31 +65,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Shuffle(int timesToShuffle, List<Card> cardsToShuffle)
+    public void Shuffle()
     {
-        int numCards = cardsToShuffle.Count;
+        // Loops through the list 4 times, randomly removing a card and placing it at the end
+        int numCards = cards.Count;
 
-        for(int i = 0; i < timesToShuffle; i++)
+        for(int i = 0; i < numCards * 4; i++)
         {
-            int firstIndex = Random.Range(0, numCards);
-            int secondIndex = Random.Range(0, numCards);
-
-            Swap(cardsToShuffle[firstIndex], cardsToShuffle[secondIndex]);
+            int randomIndex = Random.Range(0, numCards);
+            Card randomCard = cards[randomIndex];
+            cards.RemoveAt(randomIndex);
+            cards.Add(randomCard);
         }
-    }
-
-    public void Swap(Card firstCard, Card secondCard)
-    {
-        Card tempCard;
-
-        tempCard = firstCard;
-        firstCard = secondCard;
-        secondCard = tempCard;
     }
 
     public void Deal()
     {
-        Shuffle(cards.Count, cards);
+        Shuffle();
 
         CardDeck.InitializeDeck(cards);
     }
