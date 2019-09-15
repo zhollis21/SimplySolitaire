@@ -4,35 +4,48 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Deck : MonoBehaviour
-{
-    /* Need a additional list that shows the very last card.     
-     * If the player clicks on the original deck, the last card moves to the additional deck
-     * If the player clicks on the additional deck and drags and drops the card somewhere else, that card gets removed from the additional deck
-     * Once we have all the cards from the original list of cards into the additional list of cards, 
-       we need to merge the additional list into the original list */
-
+{  
     private CardStack undealtCards = new CardStack();
-    private CardStack dealtCards = new CardStack();   
+    private CardStack dealtCards = new CardStack();
+    private Vector2 dealtCardPositon;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        dealtCardPositon = new Vector2(transform.position.x + 2, transform.position.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnMouseDown()
     {
         Card clickedCard = undealtCards.Pop();
 
-        dealtCards.Push(clickedCard);
+        if (clickedCard != null)
+        {
+            clickedCard.transform.position = dealtCardPositon;
+            clickedCard.IsFaceDown = false;
 
-        Debug.Log("Click");
+            dealtCards.Push(clickedCard);
+        }
+        else
+        {
+            Card dealtCard = dealtCards.Pop();
+
+            while(dealtCard != null)
+            {
+                dealtCard.transform.position = this.transform.position;
+                dealtCard.IsFaceDown = true;
+
+                undealtCards.Push(dealtCard);
+
+                dealtCard = dealtCards.Pop();
+            }
+        }        
     }
 
     public void InitializeDeck(List<Card> cards)
@@ -40,6 +53,11 @@ public class Deck : MonoBehaviour
         undealtCards.ClearStack();
         dealtCards.ClearStack();
 
+        foreach (Card card in cards)
+        {
+            card.transform.position = this.transform.position;
+        }
+
         undealtCards.PushRange(cards);
-    }    
+    }
 }
