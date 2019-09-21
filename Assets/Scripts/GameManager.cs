@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         // Loops through the list 4 times, randomly removing a card and placing it at the end
         int numCards = cards.Count;
 
-        for(int i = 0; i < numCards * 4; i++)
+        for (int i = 0; i < numCards * 4; i++)
         {
             int randomIndex = Random.Range(0, numCards);
             Card randomCard = cards[randomIndex];
