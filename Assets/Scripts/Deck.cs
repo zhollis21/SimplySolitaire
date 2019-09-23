@@ -12,7 +12,7 @@ public class Deck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dealtCardPositon = new Vector2(transform.position.x + 1.5f, transform.position.y);
+        dealtCardPositon = new Vector2(transform.position.x + 1.5f, transform.position.y); 
     }
 
     // Update is called once per frame
