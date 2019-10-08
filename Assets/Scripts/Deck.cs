@@ -1,12 +1,11 @@
 ﻿using Assets.Scripts;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Deck : MonoBehaviour
 {  
-    private CardStack undealtCards = new CardStack();
-    private CardStack dealtCards = new CardStack();
+    public CardStack undealtCards;
+    public CardStack dealtCards;
     private Vector2 dealtCardPositon;
 
     // Start is called before the first frame update
