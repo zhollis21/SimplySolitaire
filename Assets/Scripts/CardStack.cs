@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class CardStack
+    public class CardStack : MonoBehaviour
     {
         protected List<Card> cards = new List<Card>();
 
+        /// <summary>
+        /// Adds a card on top of the stack
+        /// </summary>
         public void Push(Card newCard)
         {
             SpriteRenderer sr = newCard.GetComponent<SpriteRenderer>();
@@ -19,6 +19,9 @@ namespace Assets.Scripts
             cards.Add(newCard);
         }
 
+        /// <summary>
+        /// Pushes a list of cards in their current order onto the stack
+        /// </summary>
         public void PushRange(List<Card> newCards)
         {
             foreach(Card card in newCards)
@@ -28,7 +31,7 @@ namespace Assets.Scripts
         }
 
         /// <summary>
-        /// Returns and removes the top card from the stack
+        /// Removes and returns the top card from the stack
         /// </summary>
         public Card Pop()
         {
@@ -41,6 +44,9 @@ namespace Assets.Scripts
             return lastCard;
         }
 
+        /// <summary>
+        /// Removes all cards from the stack
+        /// </summary>
         public void ClearStack()
         {
             cards.Clear();
